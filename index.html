@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/stock-tracker-turing/assets/use-on-light-bkgd.b8f20e9f.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Turing Stock Tracker</title>
-    <script type="module" crossorigin src="/stock-tracker-turing/assets/index.fa311df3.js"></script>
-    <link rel="modulepreload" href="/stock-tracker-turing/assets/vendor.d4273615.js">
-    <link rel="stylesheet" href="/stock-tracker-turing/assets/index.9c76bd51.css">
-  </head>
 
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/stock-tracker-turing/assets/use-on-light-bkgd.b8f20e9f.svg" />
+  <meta name="theme-color" content="#4d4d4d" />
+  <meta name="description" content="Turing Stock Tracker" />
+  <link rel="apple-touch-icon" href="/stock-tracker-turing/assets/logo192.32e4817c.png" />
+  <link rel="manifest" href="data:application/json;base64,ewogICJzaG9ydF9uYW1lIjogIlR1cmluZyIsCiAgIm5hbWUiOiAiVHVyaW5nIFN0b2NrIFRyYWNrZXIiLAogICJjYXRlZ29yaWVzIjogWyJmaW5hbmNlIiwgImJ1c2luZXNzIl0sCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImxvZ282NC5wbmciLAogICAgICAic2l6ZXMiOiAiNjR4NjQiLAogICAgICAidHlwZSI6ICJpbWFnZS9wbmciCiAgICB9LAogICAgewogICAgICAic3JjIjogImxvZ28xOTIucG5nIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiCiAgICB9LAogICAgewogICAgICAic3JjIjogImxvZ281MTIucG5nIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiCiAgICB9CiAgXSwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJ0aGVtZV9jb2xvciI6ICIjNGQ0ZDRkIgp9Cg==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turing Stock Tracker</title>
+  <script type="text/javascript" src="./worker.js"></script>
+  <script type="module" crossorigin src="/stock-tracker-turing/assets/index.94e3e917.js"></script>
+  <link rel="modulepreload" href="/stock-tracker-turing/assets/vendor.de390494.js">
+  <link rel="stylesheet" href="/stock-tracker-turing/assets/index.2b249725.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  
+  <script>if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('worker.js').then(function (registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function (err) {
+          console.log('Worker registration failed', err);
+        }).catch(function (err) {
+          console.log(err);
+        });
+      });
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+  </script>
+</body>
+
 </html>
