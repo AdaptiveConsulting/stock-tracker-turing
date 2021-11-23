@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/stock-tracker-turing/sw.js', { scope: '/stock-tracker-turing/' })})}
